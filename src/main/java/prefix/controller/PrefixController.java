@@ -1,13 +1,14 @@
 package prefix.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import prefix.entity.Prefix;
 import prefix.service.PrefixService;
 
 import java.util.List;
 
-@org.springframework.stereotype.Controller
-public class Controller {
+@Controller
+public class PrefixController {
 
     @Autowired
     private PrefixService prefixService;

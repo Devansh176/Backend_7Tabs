@@ -14,7 +14,7 @@
             jdbc:mysql://localhost:3306/mednet
         </property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.password">Devansh@d17</property>
 
         <!-- Hibernate -->
         <property name="hibernate.dialect">
@@ -23,7 +23,7 @@
         <property name="hibernate.show_sql">true</property>
 
         <!-- Entity -->
-        <mapping class="com.mednet.prefix.entity.Prefix"/>
+        <mapping class="com.prefix.entity.Prefix"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mednet Training Assignment</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/css/ext-all-neptune.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all.min.js"></script>
+
+    <script src="dwr/engine.js"></script>
+    <script src="dwr/util.js"></script>
+    <script src="dwr/interface/PrefixController.js"></script>
+</head>
+
+<body>
+
+<h2>Mednet Labs – Training Assignment</h2>
+
+<div class="tabs">
+    <div class="tab" onclick="showTab('tab1')">Drop Down</div>
+    <div class="tab" onclick="showTab('tab2')">Pop-up</div>
+    <div class="tab" onclick="showTab('tab3')">List</div>
+    <div class="tab" onclick="showTab('tab4')">Entry Screen</div>
+    <div class="tab" onclick="showTab('tab5')">Excel Upload & Download</div>
+    <div class="tab" onclick="showTab('tab6')">Web Service</div>
+    <div class="tab" onclick="showTab('tab7')">PDF</div>
+</div>
+
+
+<!-- TAB-1 -->
+<div id="tab1" class="content" style="display:block;"> <div class="section-title">
+        Tab 1 : [ dropdown ] create two dropdowns, html select and extjs dropdown
+    </div>
+
+    <div class="form-row">
+        <div class="input-group">
+            <label>DEPARTMENT</label>
+            <select class="html-select">
+                <option>Department</option>
+                <option>Pathology</option>
+                <option>Radiology</option>
+                <option>Cardiology</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>STATIC VALUE</label>
+            <div id="extDropdown"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TAB-2 -->
+<div id="tab2" class="content">
+    <div class="section-title">
+        Tab 2 : [ Popup ] create a popup screen
+    </div>
+    
+    <button class="primary-btn" onclick="openEditorPopup()">Patient Details</button>
+</div>
+
+
+<!-- TAB - 3 -->
+<div id="tab3" class="content">
+    <div class="section-title">
+        TAB - 3 : [List] Create a list with paging functionality and search feature
+    </div>
+    <div id="grid-container"></div>
+</div>
+
+<!-- TAB - 4 -->
+<div id="tab4" class="content">
+    <div class="section-title">
+        Tab 4 : [ Entry ] Create an Entry / list screen with DWR
+    </div>
+    <div id="tab4-container"></div>
+</div>
+
+
+<div id="tab5" class="content">Tab 5 Content (Excel)</div>
+<div id="tab6" class="content">Tab 6 Content (Web Service)</div>
+<div id="tab7" class="content">Tab 7 Content (PDF)</div>
+
+<script src="js/tabs.js"></script>
+<script src="js/tabs1-dropdown.js"></script>
+<script src="js/tab2-popup-extJS.js"></script>
+<script src="js/tab3-list.js"></script>
+<script src="js/tab4-dwr.js"></script>
+
+</body>
+</html>

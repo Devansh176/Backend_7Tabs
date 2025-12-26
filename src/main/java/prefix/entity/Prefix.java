@@ -27,6 +27,17 @@ public class Prefix {
     @Column(name = "PREFIX_NAME")
     @Enumerated(EnumType.STRING)
     private PrefixTypes prefix;
+
+    private String displayPrefix;
+
+    // This fixed the error
+    public String getDisplayPrefix() {
+        if (prefix != null) {
+            displayPrefix = prefix.getDisplayValue();
+        }
+
+        return displayPrefix;
+    }
 }
 
 
