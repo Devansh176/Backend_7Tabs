@@ -6,11 +6,11 @@ window.initTab7 = function() {
 
     Ext.onReady(function() {
         Ext.create('Ext.panel.Panel', {
-            title: 'PDF Report Generation',
+            title: 'Tab 7: Puppeteer PDF Generation',
             renderTo: 'tab7-container',
             bodyPadding: 20,
             width: '100%',
-            height: 200,
+            height: 300,
             layout: {
                 type: 'vbox',
                 align: 'center',
@@ -18,18 +18,13 @@ window.initTab7 = function() {
             },
             items: [
                 {
-                    xtype: 'component',
-                    html: '<h3>Click below to download the full database report as PDF</h3>',
-                    margin: '0 0 20 0'
-                },
-                {
                     xtype: 'button',
-                    text: 'Download PDF',
+                    text: 'Generate PDF',
                     scale: 'large',
-                    width: 200,
+                    width: 250,
                     handler: function() {
-                        // Trigger the browser download
-                        window.open('downloadPrefixPdf', '_blank');
+                        // Trigger the download
+                        window.open('downloadPuppeteerPdf', '_blank');
                     }
                 }
             ]
