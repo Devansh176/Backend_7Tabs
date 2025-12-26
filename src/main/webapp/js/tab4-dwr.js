@@ -55,7 +55,6 @@ window.initTab4 = function() {
                 {
                     xtype: 'button',
                     text: 'Save',
-                    iconCls: 'icon-save',
                     handler: function() {
                         var form = this.up('form').getForm();
                         if(form.isValid()) {
