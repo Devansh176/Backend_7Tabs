@@ -121,7 +121,7 @@ http://localhost:8080/tabs-assignment
 ## 👨‍💻 Author
 
 **Devansh Prakash Dhopte**  
-LinkedIn: *[Your LinkedIn Profile Link]*  
+LinkedIn: *https://www.linkedin.com/in/devansh-dhopte/*  
 Email: devanshdhopte@gmail.com  
 
 Developed as a capstone project demonstrating full-stack enterprise capabilities.
