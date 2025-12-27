@@ -3,7 +3,7 @@
 ## 🚀 Overview
 A high-performance, full-stack enterprise web application designed to handle complex administrative workflows. This system features a decoupled reporting service, OS-level task scheduling, and legacy system integration, serving as a robust platform for employee management, reporting, and bulk data processing.
 
-The project demonstrates advanced backend engineering concepts, including **Java ProcessBuilder for external script orchestration**, **Linux Cron for background task isolation**, and **Direct Web Remoting (DWR)** for low-latency client-server communication.
+The project demonstrates advanced backend engineering concepts, including **Java ProcessBuilder for orchestrating external scripts**, **Linux Cron for isolating background tasks**, and **Direct Web Remoting (DWR)** for low-latency client-server communication.
 
 ---
 
@@ -71,9 +71,58 @@ This application is organized into 8 distinct functional modules ("Tabs"):
 * MySQL Database
 * Linux Environment (or WSL for Windows)
 
-### 1. Database Setup
+
+## 1. Database Setup
+
 Create a MySQL database and configure your `application.properties`:
+
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/mednet_db
 spring.datasource.username=mysql
 spring.datasource.password=yourpassword
+```
+
+## 2. Puppeteer Setup
+
+Navigate to the local Puppeteer directory and install dependencies:
+
+```bash
+cd C:/mednet_puppeteer
+npm install puppeteer
+```
+
+## 3. Linux Cron Setup (Tab 8)
+
+Make the trigger script executable and schedule it:
+
+```bash
+chmod +x ~/mednet_cron/trigger_job.sh
+crontab -e
+```
+
+Add the following line:
+
+```bash
+* * * * * /bin/bash ~/mednet_cron/trigger_job.sh
+```
+
+## 4. Build & Run
+
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
+Access the application at:  
+http://localhost:8080/tabs-assignment
+
+---
+
+## 👨‍💻 Author
+
+**Devansh Prakash Dhopte**  
+LinkedIn: *[Your LinkedIn Profile Link]*  
+Email: devanshdhopte@gmail.com  
+
+Developed as a capstone project demonstrating full-stack enterprise capabilities.
+
