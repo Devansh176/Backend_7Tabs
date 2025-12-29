@@ -23,7 +23,7 @@ window.initTab8 = function() {
                     html: '<div style="background:#f9f9f9; border:1px solid #ccc; padding:15px; margin-bottom:20px;">' +
                           '<h2 style="margin-top:0;">System: Cron</h2>' +
                           '<p>This tab monitors an <b>External Cron Job</b>.</p>' +
-                          '<p><b>Configuration:</b> The file runs every minute via Crontab.</p>' +
+                          '<p>The file runs every minute via Crontab.</p>' +
                           '</div>'
                 },
                 {

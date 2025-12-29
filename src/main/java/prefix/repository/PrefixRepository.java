@@ -29,7 +29,7 @@ public class PrefixRepository {
 
     public void deleteById(int id) {
         Session session = getCurrentSession();
-        Prefix prefix = (Prefix) session.get(Prefix.class, id);
+        Prefix prefix = session.get(Prefix.class, id);
         if(prefix != null) {
             session.delete(prefix);
         }
@@ -37,5 +37,19 @@ public class PrefixRepository {
 
     public void deleteAll() {
         getCurrentSession().createNativeQuery("TRUNCATE TABLE Prefix").executeUpdate();
+    }
+
+    // Search Query - Tab9
+    @SuppressWarnings("unchecked")
+    public List<Prefix> findByTitle(String query) {
+        if(query == null || query.trim().isEmpty()) {
+            return java.util.Collections.emptyList();
+        }
+
+        String hql = "FROM Prefix WHERE str(title) LIKE :searchKey";
+
+        return getCurrentSession().createQuery(hql)
+                .setParameter("searchKey", "%" + query.toLowerCase() + "%")
+                .list();
     }
 }
