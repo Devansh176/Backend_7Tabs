@@ -43,16 +43,13 @@ public class PrefixRepository {
         if (gender != null && !gender.trim().isEmpty()) hql.append("AND lower(str(gender)) LIKE :gender ");
         if (prefixName != null && !prefixName.trim().isEmpty()) hql.append("AND lower(str(prefix)) LIKE :prefix ");
 
-        // --- DATE RANGE LOGIC ---
-        // If "From" is filled, get dates AFTER it
         if (dobFrom != null) {
             hql.append("AND dob >= :dobFrom ");
         }
-        // If "To" is filled, get dates BEFORE it
+
         if (dobTo != null) {
             hql.append("AND dob <= :dobTo ");
         }
-        // ------------------------
 
         var query = getCurrentSession().createQuery(hql.toString());
 
