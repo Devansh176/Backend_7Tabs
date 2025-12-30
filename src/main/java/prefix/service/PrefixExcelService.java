@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.text.SimpleDateFormat; // Required for Date parsing
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class PrefixExcelService {
     @Autowired
     private PrefixService prefixService;
 
-    // --- UPLOAD LOGIC ---
+
     public void processExcelUpload(InputStream inputStream) throws IOException {
         try (Workbook workbook = new XSSFWorkbook(inputStream)) {
             Sheet sheet = workbook.getSheetAt(0);
@@ -58,7 +58,7 @@ public class PrefixExcelService {
         }
     }
 
-    // --- DOWNLOAD LOGIC ---
+
     public void generateExcelReport(OutputStream outputStream) throws IOException {
         try (Workbook workbook = new XSSFWorkbook()) {
             Sheet sheet = workbook.createSheet("Prefix Data");
@@ -78,17 +78,11 @@ public class PrefixExcelService {
             for (var p : list) {
                 Row row = sheet.createRow(rowIdx++);
 
-                // ID
                 row.createCell(0).setCellValue(p.getId());
-
-                // Name (Handle Null)
                 row.createCell(1).setCellValue(p.getName() != null ? p.getName() : "");
-
-                // DOB (Format Date to String)
                 String dobStr = (p.getDob() != null) ? dateFormat.format(p.getDob()) : "";
                 row.createCell(2).setCellValue(dobStr);
 
-                // Enums (Title, Gender, Prefix)
                 row.createCell(3).setCellValue(p.getTitle() != null ? p.getTitle().name() : "");
                 row.createCell(4).setCellValue(p.getGender() != null ? p.getGender().name() : "");
                 row.createCell(5).setCellValue(p.getPrefix() != null ? p.getPrefix().name() : "");

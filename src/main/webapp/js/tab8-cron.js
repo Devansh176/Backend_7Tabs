@@ -131,9 +131,9 @@ window.initTab8 = function() {
                             dataIndex: 'logEntry',
                             flex: 1,
                             renderer: function(value) {
-                                if(value.includes("Error")) return '<span style="color:#d32f2f; font-weight:bold;">✖ ' + value + '</span>';
-                                if(value.includes("Configuration")) return '<span style="color:#1976d2; font-weight:bold;">ℹ ' + value + '</span>';
-                                if(value.includes("CRON")) return '<span style="color:#388e3c;">✔ ' + value + '</span>';
+                                if(value.includes("Error")) return '<span style="color:#d32f2f; font-weight:bold;">&#10006; ' + value + '</span>';
+                                if(value.includes("Configuration")) return '<span style="color:#1976d2; font-weight:bold;">&#8505; ' + value + '</span>';
+                                if(value.includes("CRON")) return '<span style="color:#388e3c;">&#8505; ' + value + '</span>';
                                 return value;
                             }
                         }
