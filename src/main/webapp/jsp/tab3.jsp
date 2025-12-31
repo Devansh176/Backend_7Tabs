@@ -83,7 +83,6 @@
                         {text: 'Status', dataIndex: 'status', flex: 1},
                         {text: 'Joining Date', dataIndex: 'joiningDate', flex: 1}
                     ],
-
                     tbar: [
                         {
                             xtype: 'textfield',
