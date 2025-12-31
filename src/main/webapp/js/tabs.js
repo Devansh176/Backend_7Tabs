@@ -28,6 +28,10 @@ function showTab(tabId) {
         loadTabContent(selectedTab, 'jsp/tab2.jsp');
     }
 
+    if (tabId === 'tab3') {
+        loadTabContent(selectedTab, 'jsp/tab3.jsp');
+    }
+
     // Load Tab 4 (DWR Entry Screen)
     if (tabId === 'tab4') {
         loadTabContent(selectedTab, 'jsp/tab4.jsp');
