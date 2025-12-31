@@ -121,6 +121,7 @@
     </table>
 </div>
 
+
 <script>
     window.PatientManager = (function() {
         var cmpTitle, cmpDob, cmpGender, cmpPrefix, cmpFrom, cmpTo;
