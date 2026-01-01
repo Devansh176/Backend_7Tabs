@@ -19,7 +19,6 @@ function showTab(tabId) {
         selectedTab.style.display = 'block';
     }
 
-    // Load Tab 1 (Dropdowns)
     if (tabId === 'tab1') {
         loadTabContent(selectedTab, 'jsp/tab1.jsp');
     }
@@ -32,7 +31,6 @@ function showTab(tabId) {
         loadTabContent(selectedTab, 'jsp/tab3.jsp');
     }
 
-    // Load Tab 4 (DWR Entry Screen)
     if (tabId === 'tab4') {
         loadTabContent(selectedTab, 'jsp/tab4.jsp');
     }
@@ -53,10 +51,6 @@ function showTab(tabId) {
         loadTabContent(selectedTab, 'jsp/tab8.jsp');
     }
 
-//    // Tab 3 Specific Initialization
-//    if (tabId === 'tab3' && typeof window.initTab3 === 'function') {
-//        window.initTab3();
-//    }
 }
 
 function loadTabContent(container, url) {
@@ -69,7 +63,7 @@ function loadTabContent(container, url) {
         .then(function (response) { return response.text(); })
         .then(function (html) {
             container.innerHTML = html;
-            container.classList.add('content-loaded'); // Mark as loaded
+            container.classList.add('content-loaded');
 
             // Re-execute scripts found in the fetched HTML
             var scripts = container.getElementsByTagName("script");
