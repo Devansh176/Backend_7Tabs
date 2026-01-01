@@ -2,7 +2,7 @@ package patient.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import patient.service.DynamicSchedulerService;
+import patient.service.DynamicCronService;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class CronController {
 
     @Autowired
-    private DynamicSchedulerService schedulerService;
+    private DynamicCronService schedulerService;
 
     @PostMapping("/update")
     public String updateCron(@RequestParam("expression") String expression) {

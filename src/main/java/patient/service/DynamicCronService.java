@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 @Service
-public class DynamicSchedulerService implements ApplicationListener<ContextRefreshedEvent> {
+public class DynamicCronService implements ApplicationListener<ContextRefreshedEvent> {
 
     @Autowired
     private ThreadPoolTaskScheduler taskScheduler;
