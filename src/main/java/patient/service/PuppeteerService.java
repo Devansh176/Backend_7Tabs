@@ -112,10 +112,10 @@ public class PuppeteerService {
 
             // Structure: [Node.exe] [Script.js] [InputHTMLPath] [OutputPDFPath]
             ProcessBuilder builder = new ProcessBuilder(
-                    nodeExe,
-                    scriptName,
-                    htmlFile.getAbsolutePath(),
-                    pdfFile.getAbsolutePath()
+                nodeExe,
+                scriptName,
+                htmlFile.getAbsolutePath(),
+                pdfFile.getAbsolutePath()
             );
 
             builder.directory(new File(scriptDir));

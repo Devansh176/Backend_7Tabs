@@ -141,12 +141,14 @@
             });
 
             cmpFrom = Ext.create('Ext.form.field.Date', {
+                id: 'tab4DateFrom',
                 renderTo: 'filter-from',
                 format: 'Y-m-d',
                 width: 130
             });
 
             cmpTo = Ext.create('Ext.form.field.Date', {
+                id: 'tab4DateTo',
                 renderTo: 'filter-to',
                 format: 'Y-m-d',
                 width: 130

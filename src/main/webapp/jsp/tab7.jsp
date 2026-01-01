@@ -55,7 +55,6 @@
                     width: '100%',
                     height: 250,
 
-                    // Center the button vertically and horizontally
                     layout: {
                         type: 'vbox',
                         align: 'center',
@@ -70,15 +69,14 @@
                             width: 250,
 
                             handler: function() {
-                                // 1. Get Text Filters (Standard HTML Inputs)
-                                var tVal = document.getElementById('tab4TitleSearch') ? document.getElementById('tab4TitleSearch').value : '';
-                                var nVal = document.getElementById('tab4NameSearch') ? document.getElementById('tab4NameSearch').value : '';
-                                var gVal = document.getElementById('tab4GenderSearch') ? document.getElementById('tab4GenderSearch').value : '';
-                                var pVal = document.getElementById('tab4PrefixSearch') ? document.getElementById('tab4PrefixSearch').value : '';
+                                var tVal = document.getElementById('s-title') ? document.getElementById('s-title').value : '';
+                                var nVal = document.getElementById('s-name') ? document.getElementById('s-name').value : '';
+                                var gVal = document.getElementById('s-gender') ? document.getElementById('s-gender').value : '';
+                                var pVal = document.getElementById('s-prefix') ? document.getElementById('s-prefix').value : '';
 
                                 // Get Date Filters (ExtJS Components)
-                                var fromCmp = Ext.getCmp('dobFromFilter');
-                                var toCmp = Ext.getCmp('dobToFilter');
+                                var fromCmp = Ext.getCmp('tab4DateFrom');
+                                var toCmp = Ext.getCmp('tab4DateTo');
 
                                 var dFrom = '';
                                 var dTo = '';
