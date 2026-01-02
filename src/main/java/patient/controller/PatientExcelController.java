@@ -17,7 +17,7 @@ public class PatientExcelController {
     @Autowired
     private PatientExcelService patientExcelService;
 
-    @PostMapping("/uploadPrefixExcel")
+    @PostMapping("/uploadPatientExcel")
     public void uploadExcel(@RequestParam("excelFile") MultipartFile file, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
 
@@ -35,10 +35,10 @@ public class PatientExcelController {
     }
 
 
-    @GetMapping("/downloadPrefixExcel")
+    @GetMapping("/downloadPatientExcel")
     public void downloadExcel(HttpServletResponse response) throws IOException {
         response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-        response.setHeader("Content-Disposition", "attachment; filename=prefix_data.xlsx");
+        response.setHeader("Content-Disposition", "attachment; filename=Patient_data.xlsx");
 
         // Controller converts HttpServletResponse -> OutputStream
         patientExcelService.generateExcelReport(response.getOutputStream());

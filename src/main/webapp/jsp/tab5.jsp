@@ -79,7 +79,7 @@
                                 var form = this.up('form').getForm();
                                 if (form.isValid()) {
                                     form.submit({
-                                        url: 'uploadPrefixExcel',
+                                        url: 'uploadPatientExcel',
                                         waitMsg: 'Uploading your excel...',
                                         success: function(fp, o) {
                                             Ext.Msg.alert('Success', 'File Uploaded and Data Saved!');
@@ -112,7 +112,7 @@
                             scale: 'medium',
                             icon: 'https://cdn-icons-png.flaticon.com/16/724/724933.png',
                             handler: function() {
-                                window.open('downloadPrefixExcel', '_blank');
+                                window.open('downloadPatientExcel', '_blank');
                             }
                         }
                     ]

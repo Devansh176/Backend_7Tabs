@@ -51,6 +51,11 @@ public class PatientExcelService {
                 if (!title.isEmpty() && !gender.isEmpty() && !prefixName.isEmpty()) {
                     patientService.createPrefix(title, name, dob, gender, prefixName);
                 }
+
+                if (i == 3) {
+                    System.out.println(">>> SIMULATING CRASH AT ROW 3! <<<");
+                    throw new RuntimeException("Test Rollback Exception");
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -71,7 +76,7 @@ public class PatientExcelService {
             header.createCell(2).setCellValue("DOB");
             header.createCell(3).setCellValue("Title");
             header.createCell(4).setCellValue("Gender");
-            header.createCell(5).setCellValue("Patient");
+            header.createCell(5).setCellValue("Prefix");
 
             List<Patient> list = patientService.getAllPatients();
             int rowIdx = 1;
